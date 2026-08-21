@@ -1,0 +1,1346 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;500;600;700;800&display=swap");
+
+/* ==================================================
+   ROOT
+================================================== */
+
+:root {
+  --primary: #075dcc;
+  --primary-dark: #063b82;
+  --primary-light: #eaf3ff;
+
+  --text: #172b4d;
+  --text-light: #607089;
+
+  --border: #e2e8f0;
+
+  --bg: #eef3f8;
+  --white: #ffffff;
+
+  --sidebar: 265px;
+
+  --shadow:
+    0 25px 70px rgba(25, 55, 90, 0.14);
+}
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf4fb,
+      #f7faff
+    );
+
+  color: var(--text);
+
+  font-family:
+    "Noto Sans Lao",
+    Arial,
+    sans-serif;
+}
+
+
+/* ==================================================
+   CV
+================================================== */
+
+.cv {
+  width: 1100px;
+  min-height: 1500px;
+
+  margin: 35px auto;
+
+  background: var(--white);
+
+  display: grid;
+
+  grid-template-columns:
+    var(--sidebar)
+    1fr;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  box-shadow: var(--shadow);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* ==================================================
+   TOOLBAR
+================================================== */
+
+.toolbar {
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 999;
+
+  display: flex;
+
+  gap: 8px;
+}
+
+.toolbar button {
+  border: 0;
+
+  padding: 10px 15px;
+
+  border-radius: 9px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 20px
+    rgba(7, 93, 204, 0.25);
+
+  transition:
+    0.2s ease;
+}
+
+.toolbar button:hover {
+  transform: translateY(-2px);
+
+  background: var(--primary-dark);
+}
+
+.toolbar button:active {
+  transform: scale(0.96);
+}
+
+.theme-btn {
+  min-width: 125px;
+}
+
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.sidebar {
+  padding:
+    32px 22px 70px;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      180deg,
+      #063b82 0%,
+      #075dcc 100%
+    );
+
+  transition:
+    background 0.3s ease;
+}
+
+
+/* ==================================================
+   PROFILE PHOTO
+================================================== */
+
+.avatar {
+  width: 110px;
+  height: 110px;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  border: 4px solid #ffffff;
+
+  background: #dcecff;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ==================================================
+   SIDEBAR NAME
+================================================== */
+
+.sidebar h1 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 24px;
+
+  font-weight: 800;
+}
+
+.name-en {
+  margin: 5px 0 0;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  letter-spacing: 1.2px;
+
+  color: #dcecff;
+}
+
+
+/* ==================================================
+   ROLE
+================================================== */
+
+.role {
+  margin:
+    12px 0 25px;
+
+  padding: 9px;
+
+  text-align: center;
+
+  border-radius: 6px;
+
+  background: white;
+
+  color: var(--primary-dark);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* ==================================================
+   SIDEBAR SECTION
+================================================== */
+
+.side-section {
+  padding: 18px 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+}
+
+.side-section h2 {
+  margin:
+    0 0 12px;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  color: #ffffff;
+}
+
+.side-section p {
+  margin: 8px 0;
+
+  font-size: 11px;
+
+  line-height: 1.55;
+
+  color: #e9f3ff;
+
+  word-break: break-word;
+}
+
+
+/* ==================================================
+   SKILLS
+================================================== */
+
+.side-section h3 {
+  margin:
+    15px 0 7px;
+
+  color: #79c8ff;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.skill {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 8px;
+
+  padding: 6px 0;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  font-size: 11px;
+}
+
+.skill::after {
+  content: "●";
+
+  color: #62c3ff;
+
+  font-size: 8px;
+}
+
+
+/*
+   Hide old percentage bars
+*/
+
+.skill i {
+  display: none;
+}
+
+
+/* ==================================================
+   QUOTE
+================================================== */
+
+.quote {
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border-left:
+    3px solid
+    #66c4ff;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  font-size: 10px;
+
+  line-height: 1.9;
+
+  color: #eaf5ff;
+}
+
+
+/* ==================================================
+   MAIN CONTENT
+================================================== */
+
+.content {
+  padding:
+    35px 42px 75px;
+
+  background: white;
+
+  transition:
+    background 0.3s ease;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.top {
+  padding-bottom: 22px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom:
+    2px solid
+    var(--primary-light);
+}
+
+.mini-label {
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  color: var(--primary);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.top h2 {
+  margin: 0;
+
+  color: var(--primary-dark);
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+}
+
+.telbiz {
+  padding:
+    8px 12px;
+
+  border-radius: 6px;
+
+  background:
+    var(--primary-light);
+
+  color:
+    var(--primary);
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+.logo-mark {
+  color: var(--primary);
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.section {
+  padding:
+    19px 0;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+  transition:
+    border-color 0.3s ease;
+}
+
+.section-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 10px;
+}
+
+.section-title > span {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 6px;
+
+  background:
+    var(--primary-light);
+
+  color:
+    var(--primary);
+
+  font-size: 13px;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  color:
+    var(--primary-dark);
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+}
+
+.section p {
+  margin: 0;
+
+  color: #475b73;
+
+  font-size: 11.5px;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   PROJECT
+================================================== */
+
+.project {
+  margin-top: 15px;
+
+  padding:
+    16px 18px;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 9px;
+
+  background:
+    #fbfdff;
+
+  position: relative;
+
+  transition:
+    0.2s ease;
+}
+
+.project:hover {
+  border-color:
+    #9fc6ee;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 22px
+    rgba(25, 75, 130, 0.08);
+}
+
+.dot {
+  display: none;
+}
+
+
+/* ==================================================
+   PROJECT HEADER
+================================================== */
+
+.project-head {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.project-head h3 {
+  margin: 0;
+
+  color:
+    var(--primary-dark);
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.project-head time {
+  color:
+    #718096;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* ==================================================
+   TAGS
+================================================== */
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin: 8px 0;
+}
+
+.tags b {
+  padding:
+    4px 8px;
+
+  border-radius: 4px;
+
+  background:
+    var(--primary-light);
+
+  color:
+    var(--primary);
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   PROJECT LIST
+================================================== */
+
+.project ul {
+  margin:
+    8px 0 0;
+
+  padding-left: 17px;
+}
+
+.project li {
+  margin: 3px 0;
+
+  color:
+    #52657b;
+
+  font-size: 10.5px;
+
+  line-height: 1.65;
+}
+
+
+
+
+
+/* ==================================================
+   TWO COLUMN
+================================================== */
+
+.two-col {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 28px;
+}
+
+.two-col .section {
+  border-bottom: none;
+}
+
+
+/* ==================================================
+   CHECK LIST
+================================================== */
+
+.checks {
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.checks li {
+  margin: 7px 0;
+
+  color:
+    #52657b;
+
+  font-size: 10.5px;
+}
+
+.checks li::before {
+  content: "✓";
+
+  margin-right: 7px;
+
+  color:
+    var(--primary);
+
+  font-weight: 900;
+}
+
+
+/* ==================================================
+   LANGUAGE
+================================================== */
+
+.language {
+  display: grid;
+
+  grid-template-columns:
+    60px
+    90px
+    1fr;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 9px 0;
+
+  font-size: 10px;
+}
+
+.language > b {
+  color:
+    #718096;
+
+  font-weight: 500;
+}
+
+.language > i {
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background:
+    #e7edf4;
+}
+
+.language em {
+  display: block;
+
+  height: 100%;
+
+  background:
+    var(--primary);
+
+  border-radius: 10px;
+}
+
+
+/* ==================================================
+   CAREER OBJECTIVE
+================================================== */
+
+.objective {
+  margin-top: 4px;
+
+  padding: 17px;
+
+  border:
+    1px solid
+    #cfe2f8;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f1f7ff,
+      #ffffff
+    );
+}
+
+.objective p {
+  color:
+    #425873;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+  position: absolute;
+
+  left:
+    var(--sidebar);
+
+  right: 0;
+
+  bottom: 0;
+
+  min-height: 48px;
+
+  padding:
+    8px 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-top:
+    1px solid
+    var(--border);
+
+  background:
+    white;
+
+  color:
+    #65768c;
+
+  font-size: 9px;
+}
+
+.footer strong {
+  color:
+    #d92d2d;
+}
+
+
+/* ==================================================
+   ================================================
+   DARK MODE
+   ================================================
+================================================== */
+
+.cv.dark {
+  background:
+    #111827;
+
+  color:
+    #e5e7eb;
+
+  box-shadow:
+    0 25px 70px
+    rgba(0, 0, 0, 0.45);
+}
+
+
+/* ==================================================
+   DARK - CONTENT
+================================================== */
+
+.cv.dark .content {
+  background:
+    #111827;
+}
+
+
+/* ==================================================
+   DARK - HEADER
+================================================== */
+
+.cv.dark .top {
+  border-bottom-color:
+    #263449;
+}
+
+.cv.dark .top h2 {
+  color:
+    #8ecbff;
+}
+
+.cv.dark .mini-label {
+  color:
+    #5eb7ff;
+}
+
+.cv.dark .telbiz {
+  background:
+    #172d48;
+
+  color:
+    #75c5ff;
+}
+
+
+/* ==================================================
+   DARK - SECTIONS
+================================================== */
+
+.cv.dark .section {
+  border-bottom-color:
+    #263449;
+}
+
+.cv.dark .section-title h2 {
+  color:
+    #8ecbff;
+}
+
+.cv.dark .section-title > span {
+  background:
+    #172d48;
+
+  color:
+    #66bfff;
+}
+
+
+/* ==================================================
+   DARK - TEXT
+================================================== */
+
+.cv.dark .section p {
+  color:
+    #c5d1df;
+}
+
+.cv.dark .project li {
+  color:
+    #bdc9d7;
+}
+
+
+/* ==================================================
+   DARK - PROJECT
+================================================== */
+
+.cv.dark .project {
+  background:
+    #172131;
+
+  border-color:
+    #2c3b50;
+}
+
+.cv.dark .project:hover {
+  border-color:
+    #438fd1;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0, 0, 0, 0.25);
+}
+
+.cv.dark .project-head h3 {
+  color:
+    #8ecbff;
+}
+
+.cv.dark .project-head time {
+  color:
+    #8fa1b6;
+}
+
+
+/* ==================================================
+   DARK - TAGS
+================================================== */
+
+.cv.dark .tags b {
+  background:
+    #193a5e;
+
+  color:
+    #8dceff;
+}
+
+
+/* ==================================================
+   DARK - EDUCATION
+================================================== */
+
+.cv.dark .education {
+  background:
+    #172131;
+
+  border-left-color:
+    #4fa9ec;
+}
+
+.cv.dark .education strong {
+  color:
+    #8ecbff;
+}
+
+.cv.dark .education span,
+.cv.dark .education p {
+  color:
+    #aab8c8;
+}
+
+
+/* ==================================================
+   DARK - SOFT SKILLS
+================================================== */
+
+.cv.dark .checks li {
+  color:
+    #c2cedc;
+}
+
+.cv.dark .checks li::before {
+  color:
+    #5ebcff;
+}
+
+
+/* ==================================================
+   DARK - LANGUAGE
+================================================== */
+
+.cv.dark .language > b {
+  color:
+    #9eafc2;
+}
+
+.cv.dark .language > i {
+  background:
+    #29384a;
+}
+
+.cv.dark .language em {
+  background:
+    #5ebcff;
+}
+
+
+/* ==================================================
+   DARK - OBJECTIVE
+================================================== */
+
+.cv.dark .objective {
+  background:
+    linear-gradient(
+      90deg,
+      #172b43,
+      #111827
+    );
+
+  border-color:
+    #315d87;
+}
+
+.cv.dark .objective p {
+  color:
+    #c8d4e1;
+}
+
+
+/* ==================================================
+   DARK - FOOTER
+================================================== */
+
+.cv.dark .footer {
+  background:
+    #111827;
+
+  border-top-color:
+    #29384b;
+
+  color:
+    #9eacbd;
+}
+
+.cv.dark .footer strong {
+  color:
+    #ff6b6b;
+}
+
+
+/* ==================================================
+   DARK - TOOLBAR
+================================================== */
+
+.cv.dark .toolbar button {
+  background:
+    #1d2b3c;
+
+  color:
+    #dcecff;
+
+  border:
+    1px solid
+    #34475e;
+}
+
+.cv.dark .toolbar button:hover {
+  background:
+    #075dcc;
+
+  color:
+    white;
+}
+
+
+/* ==================================================
+   DARK - SIDEBAR
+================================================== */
+
+.cv.dark .sidebar {
+  background:
+    linear-gradient(
+      180deg,
+      #071a31 0%,
+      #0b315a 100%
+    );
+}
+
+
+/* ==================================================
+   DARK - AVATAR
+================================================== */
+
+.cv.dark .avatar {
+  background:
+    #1e3a5f;
+
+  border-color:
+    #8ecbff;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 850px) {
+
+  .cv {
+    width: 96%;
+
+    grid-template-columns:
+      220px
+      1fr;
+  }
+
+  .content {
+    padding:
+      28px 25px 70px;
+  }
+
+  .top h2 {
+    font-size: 23px;
+  }
+
+  .footer {
+    left: 220px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE - 700px
+================================================== */
+
+@media (max-width: 700px) {
+
+  body {
+    background:
+      white;
+  }
+
+  .cv {
+    width: 100%;
+
+    margin: 0;
+
+    display: block;
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .toolbar {
+    top: 10px;
+    right: 10px;
+  }
+
+  .toolbar button {
+    padding:
+      8px 11px;
+
+    font-size: 11px;
+  }
+
+  .sidebar {
+    padding:
+      30px 25px 40px;
+  }
+
+  .content {
+    padding:
+      25px 20px 60px;
+  }
+
+  .two-col {
+    grid-template-columns:
+      1fr;
+
+    gap: 0;
+  }
+
+  .top {
+    display: block;
+  }
+
+  .telbiz {
+    display: inline-block;
+
+    margin-top: 10px;
+  }
+
+  .project-head {
+    display: block;
+  }
+
+  .project-head time {
+    display: block;
+
+    margin-top: 3px;
+  }
+
+  .footer {
+    position: relative;
+
+    left: auto;
+
+    bottom: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    padding: 15px;
+
+    text-align: center;
+  }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 450px) {
+
+  .toolbar {
+    position: absolute;
+  }
+
+  .toolbar button {
+    min-width: auto;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sidebar h1 {
+    font-size: 21px;
+  }
+
+  .top h2 {
+    font-size: 21px;
+  }
+
+  .project {
+    padding:
+      14px;
+  }
+
+  .language {
+    grid-template-columns:
+      55px
+      80px
+      1fr;
+  }
+
+  .footer {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+
+/* ==================================================
+   PRINT
+================================================== */
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background:
+      white;
+  }
+
+  .toolbar {
+    display:
+      none !important;
+  }
+
+  .cv {
+    width: 210mm;
+
+    min-height: 297mm;
+
+    margin: 0;
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+  .sidebar,
+  .tags b,
+  .section-title > span,
+  .language em,
+  .objective {
+    -webkit-print-color-adjust:
+      exact;
+
+    print-color-adjust:
+      exact;
+  }
+
+  .project:hover {
+    transform: none;
+
+    box-shadow: none;
+  }
+}
