@@ -61,9 +61,7 @@ function Cv_me() {
             💻 github.com/khamsing5161
           </p>
 
-          <p>
-            🌐 portfolio.singkham-dev.com
-          </p>
+          
 
         </section>
 
