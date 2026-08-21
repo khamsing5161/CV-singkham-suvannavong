@@ -641,6 +641,7 @@ body {
 
 .project li {
   margin: 3px 0;
+  display: flex;
 
   color:
     #52657b;
